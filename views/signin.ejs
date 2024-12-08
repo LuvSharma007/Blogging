@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In - Blogging App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+    <style>
+        /* General Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #3B82F6 0%, #2563EB 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        /* Form Container */
+        .signin-container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            max-width: 400px;
+            width: 100%;
+        }
+        /* Input and Button Styles */
+        .form-input {
+            border: 1px solid #d1d5db;
+            border-radius: 5px;
+            padding: 12px;
+            margin-top: 10px;
+            width: 100%;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease;
+        }
+        .form-input:focus {
+            border-color: #4f46e5;
+            outline: none;
+        }
+        .submit-btn {
+            background-color: #4f46e5;
+            color: #fff;
+            padding: 12px;
+            border-radius: 5px;
+            margin-top: 20px;
+            width: 100%;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .submit-btn:hover {
+            background-color: #3b82f6;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="signin-container">
+        <h2 class="text-3xl font-semibold text-center text-gray-800 mb-4">Sign In</h2>
+        <p class="text-center text-gray-500 mb-6">Access your blogging account</p>
+        
+        <!-- Sign-In Form -->
+        <form action="/signin" method="POST">
+            <label for="email" class="block text-gray-700">Email Address</label>
+            <input type="email" id="email" name="email" class="form-input" required>
+
+            <label for="password" class="block text-gray-700 mt-4">Password</label>
+            <input type="password" id="password" name="password" class="form-input" required>
+
+            <button type="submit" class="submit-btn mt-6">Sign In</button>
+        </form>
+        
+        <p class="text-center text-gray-500 mt-4">Don't have an account? <a href="/signup" class="text-blue-600">Sign Up</a></p>
+    </div>
+
+</body>
+</html>
